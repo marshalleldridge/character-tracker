@@ -5,133 +5,129 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import edu.cnm.deepdive.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
+
+  private ActivityMainBinding binding;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
+    binding = ActivityMainBinding.inflate(getLayoutInflater());
+    View view = binding.getRoot();
+    setContentView(view);
   }
 
 //Strength
   @SuppressLint("SetTextI18n")
   public void plusOneToStr(View view) {
-    TextView value = findViewById(R.id.strength_value);
-    float original = Float.parseFloat(value.getText().toString());
+    float original = Float.parseFloat(binding.strVal.getText().toString());
     float update = original + 1F;
-    value.setText(Float.toString(update));
+    binding.strVal.setText(Float.toString(update));
   }
 
   @SuppressLint("SetTextI18n")
   public void minusOneToStr(View view) {
-    TextView value = findViewById(R.id.strength_value);
-    float original = Float.parseFloat(value.getText().toString());
+    float original = Float.parseFloat(binding.strVal.getText().toString());
     if (original > 1) {
       float update = original - 1F;
-      value.setText(Float.toString(update));
+      binding.strVal.setText(Float.toString(update));
     } else {
-      value.setText(Float.toString(original));
+      binding.strVal.setText(Float.toString(original));
     }
   }
+
 //Dexterity
   @SuppressLint("SetTextI18n")
   public void plusOneToDex(View view) {
-    TextView value = findViewById(R.id.dexterity_value);
-    float original = Float.parseFloat(value.getText().toString());
+    float original = Float.parseFloat(binding.dexVal.getText().toString());
     float update = original + 1F;
-    value.setText(Float.toString(update));
+    binding.dexVal.setText(Float.toString(update));
   }
 
   @SuppressLint("SetTextI18n")
   public void minusOneToDex(View view) {
-    TextView value = findViewById(R.id.dexterity_value);
-    float original = Float.parseFloat(value.getText().toString());
+    float original = Float.parseFloat(binding.dexVal.getText().toString());
     if (original > 1) {
       float update = original - 1F;
-      value.setText(Float.toString(update));
+      binding.dexVal.setText(Float.toString(update));
     } else {
-      value.setText(Float.toString(original));
+      binding.dexVal.setText(Float.toString(original));
     }
   }
+
 //Intelligence
   @SuppressLint("SetTextI18n")
   public void plusOneToInt(View view) {
-    TextView value = findViewById(R.id.intelligence_value);
-    float original = Float.parseFloat(value.getText().toString());
+    float original = Float.parseFloat(binding.intVal.getText().toString());
     float update = original + 1F;
-    value.setText(Float.toString(update));
+    binding.intVal.setText(Float.toString(update));
   }
 
   @SuppressLint("SetTextI18n")
   public void minusOneToInt(View view) {
-    TextView value = findViewById(R.id.intelligence_value);
-    float original = Float.parseFloat(value.getText().toString());
+    float original = Float.parseFloat(binding.intVal.getText().toString());
     if (original > 1) {
       float update = original - 1F;
-      value.setText(Float.toString(update));
+      binding.intVal.setText(Float.toString(update));
     } else {
-      value.setText(Float.toString(original));
+      binding.intVal.setText(Float.toString(original));
     }
   }
 //Wisdom
   @SuppressLint("SetTextI18n")
   public void plusOneToWis(View view) {
-    TextView value = findViewById(R.id.wisdom_value);
-    float original = Float.parseFloat(value.getText().toString());
+    float original = Float.parseFloat(binding.wisVal.getText().toString());
     float update = original + 1F;
-    value.setText(Float.toString(update));
+    binding.wisVal.setText(Float.toString(update));
   }
 
   @SuppressLint("SetTextI18n")
   public void minusOneToWis(View view) {
-    TextView value = findViewById(R.id.wisdom_value);
-    float original = Float.parseFloat(value.getText().toString());
+    float original = Float.parseFloat(binding.wisVal.getText().toString());
     if (original > 1) {
       float update = original - 1F;
-      value.setText(Float.toString(update));
+      binding.wisVal.setText(Float.toString(update));
     } else {
-      value.setText(Float.toString(original));
+      binding.wisVal.setText(Float.toString(original));
     }
   }
 //Agility
   @SuppressLint("SetTextI18n")
   public void plusOneToAgi(View view) {
-    TextView value = findViewById(R.id.agility_value);
-    float original = Float.parseFloat(value.getText().toString());
+    float original = Float.parseFloat(binding.agiVal.getText().toString());
     float update = original + 1F;
-    value.setText(Float.toString(update));
+    binding.agiVal.setText(Float.toString(update));
   }
 
   @SuppressLint("SetTextI18n")
   public void minusOneToAgi(View view) {
-    TextView value = findViewById(R.id.agility_value);
-    float original = Float.parseFloat(value.getText().toString());
+    float original = Float.parseFloat(binding.agiVal.getText().toString());
     if (original > 1) {
       float update = original - 1F;
-      value.setText(Float.toString(update));
+      binding.agiVal.setText(Float.toString(update));
     } else {
-      value.setText(Float.toString(original));
+      binding.agiVal.setText(Float.toString(original));
     }
   }
 //Constitution
   @SuppressLint("SetTextI18n")
   public void plusOneToCon(View view) {
-    TextView value = findViewById(R.id.constitution_value);
-    float original = Float.parseFloat(value.getText().toString());
+    float original = Float.parseFloat(binding.conVal.getText().toString());
     float update = original + 1F;
-    value.setText(Float.toString(update));
+    binding.conVal.setText(Float.toString(update));
   }
 
   @SuppressLint("SetTextI18n")
   public void minusOneToCon(View view) {
-    TextView value = findViewById(R.id.constitution_value);
-    float original = Float.parseFloat(value.getText().toString());
+    float original = Float.parseFloat(binding.conVal.getText().toString());
     if (original > 1) {
       float update = original - 1F;
-      value.setText(Float.toString(update));
+      binding.conVal.setText(Float.toString(update));
     } else {
-      value.setText(Float.toString(original));
+      binding.conVal.setText(Float.toString(original));
     }
   }
 }
