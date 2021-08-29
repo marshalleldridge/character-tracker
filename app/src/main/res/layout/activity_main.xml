@@ -70,12 +70,13 @@
 <!--Strength-->
   <TextView
     android:id="@+id/strength"
-    android:layout_width="wrap_content"
+    android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:text="@string/strength_label"
     android:layout_margin="@dimen/half_dynamic_spacing"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/character_race"
+    app:layout_constraintEnd_toStartOf="@id/strength_value"
     tools:text="Strength"/>
 
   <TextView
@@ -86,7 +87,7 @@
     android:text="@string/main_stat_base_value"
     app:layout_constraintBottom_toBottomOf="@id/strength"
     app:layout_constraintEnd_toStartOf="@id/increase_strength_button"
-    app:layout_constraintStart_toEndOf="@id/strength"
+    app:layout_constraintStart_toEndOf="@id/constitution"
     app:layout_constraintTop_toTopOf="@id/strength"/>
 
   <ImageButton
@@ -117,12 +118,13 @@
 <!--Dexterity-->
   <TextView
     android:id="@+id/dexterity"
-    android:layout_width="wrap_content"
+    android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:text="@string/dexterity_label"
     android:layout_margin="@dimen/half_dynamic_spacing"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/strength"
+    app:layout_constraintEnd_toStartOf="@id/dexterity_value"
     tools:text="Dexterity"/>
 
   <TextView
@@ -133,7 +135,7 @@
     android:text="@string/main_stat_base_value"
     app:layout_constraintBottom_toBottomOf="@id/dexterity"
     app:layout_constraintEnd_toStartOf="@id/increase_dexterity_button"
-    app:layout_constraintStart_toEndOf="@id/dexterity"
+    app:layout_constraintStart_toEndOf="@id/constitution"
     app:layout_constraintTop_toTopOf="@id/dexterity"/>
 
   <ImageButton
@@ -164,12 +166,13 @@
   <!--Intelligence-->
   <TextView
     android:id="@+id/intelligence"
-    android:layout_width="wrap_content"
+    android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:text="@string/intelligence_label"
     android:layout_margin="@dimen/half_dynamic_spacing"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/dexterity"
+    app:layout_constraintEnd_toStartOf="@id/intelligence_value"
     tools:text="Intelligence"/>
 
   <TextView
@@ -180,7 +183,7 @@
     android:text="@string/main_stat_base_value"
     app:layout_constraintBottom_toBottomOf="@id/intelligence"
     app:layout_constraintEnd_toStartOf="@id/increase_intelligence_button"
-    app:layout_constraintStart_toEndOf="@id/intelligence"
+    app:layout_constraintStart_toEndOf="@id/constitution"
     app:layout_constraintTop_toTopOf="@id/intelligence"/>
 
   <ImageButton
@@ -211,12 +214,13 @@
   <!--Wisdom-->
   <TextView
     android:id="@+id/wisdom"
-    android:layout_width="wrap_content"
+    android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:text="@string/wisdom_label"
     android:layout_margin="@dimen/half_dynamic_spacing"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/intelligence"
+    app:layout_constraintEnd_toStartOf="@id/wisdom_value"
     tools:text="Wisdom"/>
 
   <TextView
@@ -227,7 +231,7 @@
     android:text="@string/main_stat_base_value"
     app:layout_constraintBottom_toBottomOf="@id/wisdom"
     app:layout_constraintEnd_toStartOf="@id/increase_wisdom_button"
-    app:layout_constraintStart_toEndOf="@id/wisdom"
+    app:layout_constraintStart_toEndOf="@id/constitution"
     app:layout_constraintTop_toTopOf="@id/wisdom"/>
 
   <ImageButton
@@ -258,12 +262,13 @@
   <!--Agility-->
   <TextView
     android:id="@+id/agility"
-    android:layout_width="wrap_content"
+    android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:text="@string/agility_label"
     android:layout_margin="@dimen/half_dynamic_spacing"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/wisdom"
+    app:layout_constraintEnd_toStartOf="@id/agility_value"
     tools:text="Agility"/>
 
   <TextView
@@ -274,7 +279,7 @@
     android:text="@string/main_stat_base_value"
     app:layout_constraintBottom_toBottomOf="@id/agility"
     app:layout_constraintEnd_toStartOf="@id/increase_agility_button"
-    app:layout_constraintStart_toEndOf="@id/agility"
+    app:layout_constraintStart_toEndOf="@id/constitution"
     app:layout_constraintTop_toTopOf="@id/agility"/>
 
   <ImageButton
