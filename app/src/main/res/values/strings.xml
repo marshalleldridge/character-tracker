@@ -1,3 +1,27 @@
 <resources>
   <string name="app_name">character-tracker</string>
+  <string name="enter_character_name_hint">Enter Character Name</string>
+  <string name="hit_points_hint">Hit Points</string>
+  <string name="spell_points_hint">Spell Points</string>
+  <string name="character_race_hint">Character race</string>
+  <string name="character_class_hint">Character Class</string>
+  <string name="strength_label">Strength</string>
+  <string name="main_stat_base_value">1.0</string>
+  <string name="str_increase_label">Increase str by one.</string>
+  <string name="str_decrease_label">Decrease str by one.</string>
+  <string name="dexterity_label">Dexterity</string>
+  <string name="dex_increase_label">Increase dex by one.</string>
+  <string name="dex_decrease_label">Decrease dex by one.</string>
+  <string name="intelligence_label">Intelligence</string>
+  <string name="int_increase_label">Increase int by one.</string>
+  <string name="int_decrease_label">Decrease int by one</string>
+  <string name="wisdom_label">Wisdom</string>
+  <string name="wis_increase_label">Increase wis by one.</string>
+  <string name="wis_decrease_label">Decrease wis by one</string>
+  <string name="agility_label">Agility</string>
+  <string name="agi_increase_label">Increase agi by one.</string>
+  <string name="agi_decrease_label">Decrease agi by one</string>
+  <string name="constitution_label">Constitution</string>
+  <string name="con_increase_label">Increase con by one.</string>
+  <string name="con_decrease_label">Decrease con by one</string>
 </resources>

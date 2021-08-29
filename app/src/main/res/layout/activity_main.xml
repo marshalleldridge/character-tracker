@@ -6,69 +6,74 @@
   android:layout_width="match_parent"
   android:layout_height="wrap_content"
   tools:context=".MainActivity">
+
 <!--Character Description-->
   <com.google.android.material.textfield.TextInputEditText
     android:id="@+id/character_name"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="@dimen/half_dynamic_spacing"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toStartOf="@id/hit_points"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintHorizontal_weight="4"
-    android:hint="Enter Character Name"/>
+    android:hint="@string/enter_character_name_hint"/>
 
   <TextView
     android:id="@+id/hit_points"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="@dimen/half_dynamic_spacing"
     app:layout_constraintStart_toEndOf="@id/character_name"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintHorizontal_weight="2"
-    android:hint="Hit Points"/>
+    android:hint="@string/hit_points_hint"
+    tools:text="Hit Points"/>
 
   <TextView
     android:id="@+id/spell_points"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="@dimen/half_dynamic_spacing"
     app:layout_constraintStart_toEndOf="@id/character_name"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/hit_points"
     app:layout_constraintHorizontal_weight="1"
-    android:hint="Spell Points"/>
+    android:hint="@string/spell_points_hint"
+    tools:text="Spell Points"/>
 
   <TextView
     android:id="@+id/character_race"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="@dimen/half_dynamic_spacing"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toStartOf="@id/character_class"
     app:layout_constraintTop_toBottomOf="@id/character_name"
     app:layout_constraintHorizontal_weight="5"
-    android:hint="Character race"/>
+    android:hint="@string/character_race_hint"
+    tools:text="Character Race"/>
 
   <TextView
     android:id="@+id/character_class"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="@dimen/half_dynamic_spacing"
     app:layout_constraintStart_toEndOf="@id/character_race"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintTop_toBottomOf="@id/character_name"
     app:layout_constraintHorizontal_weight="5"
-    android:hint="Character Class"/>
+    android:hint="@string/character_class_hint"
+    tools:text="Character Class"/>
 
 <!--Strength-->
   <TextView
     android:id="@+id/strength"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Strength"
-    android:layout_margin="8dp"
+    android:text="@string/strength_label"
+    android:layout_margin="@dimen/half_dynamic_spacing"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/character_race"
     tools:text="Strength"/>
@@ -77,8 +82,8 @@
     android:id="@+id/strength_value"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    android:text="1"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    android:text="@string/main_stat_base_value"
     app:layout_constraintBottom_toBottomOf="@id/strength"
     app:layout_constraintEnd_toStartOf="@id/increase_strength_button"
     app:layout_constraintStart_toEndOf="@id/strength"
@@ -88,35 +93,34 @@
     android:id="@+id/increase_strength_button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:layout_constraintHorizontal_bias="1"
-    android:layout_margin="8dp"
+    android:layout_margin="@dimen/half_dynamic_spacing"
     android:onClick="plusOneToStr"
     android:src="@drawable/ic_add"
     app:layout_constraintTop_toTopOf="@id/strength"
     app:layout_constraintBottom_toBottomOf="@id/strength"
     app:layout_constraintStart_toEndOf="@id/strength_value"
     app:layout_constraintEnd_toStartOf="@id/decrease_strength_button"
-    android:contentDescription="Increase strength by one."/>
+    android:contentDescription="@string/str_increase_label"/>
 
   <ImageButton
     android:id="@+id/decrease_strength_button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    android:contentDescription="decrease strength by one."
+    android:layout_margin="@dimen/half_dynamic_spacing"
     android:onClick="minusOneToStr"
     android:src="@drawable/ic_subtract"
     app:layout_constraintBottom_toBottomOf="@id/strength"
     app:layout_constraintStart_toEndOf="@id/increase_strength_button"
-    app:layout_constraintTop_toTopOf="@id/strength"/>
+    app:layout_constraintTop_toTopOf="@id/strength"
+    android:contentDescription="@string/str_decrease_label"/>
 
 <!--Dexterity-->
   <TextView
     android:id="@+id/dexterity"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="dexterity"
-    android:layout_margin="8dp"
+    android:text="@string/dexterity_label"
+    android:layout_margin="@dimen/half_dynamic_spacing"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/strength"
     tools:text="Dexterity"/>
@@ -125,8 +129,8 @@
     android:id="@+id/dexterity_value"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    android:text="1"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    android:text="@string/main_stat_base_value"
     app:layout_constraintBottom_toBottomOf="@id/dexterity"
     app:layout_constraintEnd_toStartOf="@id/increase_dexterity_button"
     app:layout_constraintStart_toEndOf="@id/dexterity"
@@ -136,27 +140,213 @@
     android:id="@+id/increase_dexterity_button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:layout_constraintHorizontal_bias="1"
-    android:layout_margin="8dp"
+    android:layout_margin="@dimen/half_dynamic_spacing"
     android:onClick="plusOneToDex"
     android:src="@drawable/ic_add"
     app:layout_constraintTop_toTopOf="@id/dexterity"
     app:layout_constraintBottom_toBottomOf="@id/dexterity"
     app:layout_constraintStart_toEndOf="@id/dexterity_value"
     app:layout_constraintEnd_toStartOf="@id/decrease_dexterity_button"
-    android:contentDescription="Increase dexterity by one."/>
+    android:contentDescription="@string/dex_increase_label"/>
 
   <ImageButton
     android:id="@+id/decrease_dexterity_button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    android:contentDescription="Decrease dexterity by one."
+    android:layout_margin="@dimen/half_dynamic_spacing"
     android:onClick="minusOneToDex"
     android:src="@drawable/ic_subtract"
     app:layout_constraintBottom_toBottomOf="@id/dexterity"
     app:layout_constraintStart_toEndOf="@id/increase_dexterity_button"
-    app:layout_constraintTop_toTopOf="@id/dexterity"/>
+    app:layout_constraintTop_toTopOf="@id/dexterity"
+    android:contentDescription="@string/dex_decrease_label"/>
 
+  <!--Intelligence-->
+  <TextView
+    android:id="@+id/intelligence"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/intelligence_label"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/dexterity"
+    tools:text="Intelligence"/>
+
+  <TextView
+    android:id="@+id/intelligence_value"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    android:text="@string/main_stat_base_value"
+    app:layout_constraintBottom_toBottomOf="@id/intelligence"
+    app:layout_constraintEnd_toStartOf="@id/increase_intelligence_button"
+    app:layout_constraintStart_toEndOf="@id/intelligence"
+    app:layout_constraintTop_toTopOf="@id/intelligence"/>
+
+  <ImageButton
+    android:id="@+id/increase_intelligence_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    android:onClick="plusOneToInt"
+    android:src="@drawable/ic_add"
+    app:layout_constraintTop_toTopOf="@id/intelligence"
+    app:layout_constraintBottom_toBottomOf="@id/intelligence"
+    app:layout_constraintStart_toEndOf="@id/intelligence_value"
+    app:layout_constraintEnd_toStartOf="@id/decrease_intelligence_button"
+    android:contentDescription="@string/int_increase_label"/>
+
+  <ImageButton
+    android:id="@+id/decrease_intelligence_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    android:onClick="minusOneToInt"
+    android:src="@drawable/ic_subtract"
+    app:layout_constraintBottom_toBottomOf="@id/intelligence"
+    app:layout_constraintStart_toEndOf="@id/increase_intelligence_button"
+    app:layout_constraintTop_toTopOf="@id/intelligence"
+    android:contentDescription="@string/int_decrease_label"/>
+
+  <!--Wisdom-->
+  <TextView
+    android:id="@+id/wisdom"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/wisdom_label"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/intelligence"
+    tools:text="Wisdom"/>
+
+  <TextView
+    android:id="@+id/wisdom_value"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    android:text="@string/main_stat_base_value"
+    app:layout_constraintBottom_toBottomOf="@id/wisdom"
+    app:layout_constraintEnd_toStartOf="@id/increase_wisdom_button"
+    app:layout_constraintStart_toEndOf="@id/wisdom"
+    app:layout_constraintTop_toTopOf="@id/wisdom"/>
+
+  <ImageButton
+    android:id="@+id/increase_wisdom_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    android:onClick="plusOneToWis"
+    android:src="@drawable/ic_add"
+    app:layout_constraintTop_toTopOf="@id/wisdom"
+    app:layout_constraintBottom_toBottomOf="@id/wisdom"
+    app:layout_constraintStart_toEndOf="@id/wisdom_value"
+    app:layout_constraintEnd_toStartOf="@id/decrease_wisdom_button"
+    android:contentDescription="@string/wis_increase_label"/>
+
+  <ImageButton
+    android:id="@+id/decrease_wisdom_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    android:onClick="minusOneToWis"
+    android:src="@drawable/ic_subtract"
+    app:layout_constraintBottom_toBottomOf="@id/wisdom"
+    app:layout_constraintStart_toEndOf="@id/increase_wisdom_button"
+    app:layout_constraintTop_toTopOf="@id/wisdom"
+    android:contentDescription="@string/wis_decrease_label"/>
+
+  <!--Agility-->
+  <TextView
+    android:id="@+id/agility"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/agility_label"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/wisdom"
+    tools:text="Agility"/>
+
+  <TextView
+    android:id="@+id/agility_value"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    android:text="@string/main_stat_base_value"
+    app:layout_constraintBottom_toBottomOf="@id/agility"
+    app:layout_constraintEnd_toStartOf="@id/increase_agility_button"
+    app:layout_constraintStart_toEndOf="@id/agility"
+    app:layout_constraintTop_toTopOf="@id/agility"/>
+
+  <ImageButton
+    android:id="@+id/increase_agility_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    android:onClick="plusOneToAgi"
+    android:src="@drawable/ic_add"
+    app:layout_constraintTop_toTopOf="@id/agility"
+    app:layout_constraintBottom_toBottomOf="@id/agility"
+    app:layout_constraintStart_toEndOf="@id/agility_value"
+    app:layout_constraintEnd_toStartOf="@id/decrease_agility_button"
+    android:contentDescription="@string/agi_increase_label"/>
+
+  <ImageButton
+    android:id="@+id/decrease_agility_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    android:onClick="minusOneToAgi"
+    android:src="@drawable/ic_subtract"
+    app:layout_constraintBottom_toBottomOf="@id/agility"
+    app:layout_constraintStart_toEndOf="@id/increase_agility_button"
+    app:layout_constraintTop_toTopOf="@id/agility"
+    android:contentDescription="@string/agi_decrease_label"/>
+
+  <!--Constitution-->
+  <TextView
+    android:id="@+id/constitution"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/constitution_label"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/agility"
+    tools:text="Constitution"/>
+
+  <TextView
+    android:id="@+id/constitution_value"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    android:text="@string/main_stat_base_value"
+    app:layout_constraintBottom_toBottomOf="@id/constitution"
+    app:layout_constraintEnd_toStartOf="@id/increase_constitution_button"
+    app:layout_constraintStart_toEndOf="@id/constitution"
+    app:layout_constraintTop_toTopOf="@id/constitution"/>
+
+  <ImageButton
+    android:id="@+id/increase_constitution_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    android:onClick="plusOneToCon"
+    android:src="@drawable/ic_add"
+    app:layout_constraintTop_toTopOf="@id/constitution"
+    app:layout_constraintBottom_toBottomOf="@id/constitution"
+    app:layout_constraintStart_toEndOf="@id/constitution_value"
+    app:layout_constraintEnd_toStartOf="@id/decrease_constitution_button"
+    android:contentDescription="@string/con_increase_label"/>
+
+  <ImageButton
+    android:id="@+id/decrease_constitution_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    android:onClick="minusOneToCon"
+    android:src="@drawable/ic_subtract"
+    app:layout_constraintBottom_toBottomOf="@id/constitution"
+    app:layout_constraintStart_toEndOf="@id/increase_constitution_button"
+    app:layout_constraintTop_toTopOf="@id/constitution"
+    android:contentDescription="@string/con_decrease_label"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
