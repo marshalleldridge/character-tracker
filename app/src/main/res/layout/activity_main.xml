@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  tools:context=".MainActivity">
+<!--Character Description-->
+  <com.google.android.material.textfield.TextInputEditText
+    android:id="@+id/character_name"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/hit_points"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintHorizontal_weight="4"
+    android:hint="Enter Character Name"/>
+
+  <TextView
+    android:id="@+id/hit_points"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:layout_constraintStart_toEndOf="@id/character_name"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintHorizontal_weight="2"
+    android:hint="Hit Points"/>
+
+  <TextView
+    android:id="@+id/spell_points"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:layout_constraintStart_toEndOf="@id/character_name"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/hit_points"
+    app:layout_constraintHorizontal_weight="1"
+    android:hint="Spell Points"/>
+
+  <TextView
+    android:id="@+id/character_race"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/character_class"
+    app:layout_constraintTop_toBottomOf="@id/character_name"
+    app:layout_constraintHorizontal_weight="5"
+    android:hint="Character race"/>
+
+  <TextView
+    android:id="@+id/character_class"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:layout_constraintStart_toEndOf="@id/character_race"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/character_name"
+    app:layout_constraintHorizontal_weight="5"
+    android:hint="Character Class"/>
+
+<!--Strength-->
+  <TextView
+    android:id="@+id/strength"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Strength"
+    android:layout_margin="8dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/character_race"
+    tools:text="Strength"/>
+
+  <TextView
+    android:id="@+id/strength_value"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:text="1"
+    app:layout_constraintBottom_toBottomOf="@id/strength"
+    app:layout_constraintEnd_toStartOf="@id/increase_strength_button"
+    app:layout_constraintStart_toEndOf="@id/strength"
+    app:layout_constraintTop_toTopOf="@id/strength"/>
+
+  <ImageButton
+    android:id="@+id/increase_strength_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintHorizontal_bias="1"
+    android:layout_margin="8dp"
+    android:onClick="plusOneToStr"
+    android:src="@drawable/ic_add"
+    app:layout_constraintTop_toTopOf="@id/strength"
+    app:layout_constraintBottom_toBottomOf="@id/strength"
+    app:layout_constraintStart_toEndOf="@id/strength_value"
+    app:layout_constraintEnd_toStartOf="@id/decrease_strength_button"
+    android:contentDescription="Increase strength by one."/>
+
+  <ImageButton
+    android:id="@+id/decrease_strength_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:contentDescription="decrease strength by one."
+    android:onClick="minusOneToStr"
+    android:src="@drawable/ic_subtract"
+    app:layout_constraintBottom_toBottomOf="@id/strength"
+    app:layout_constraintStart_toEndOf="@id/increase_strength_button"
+    app:layout_constraintTop_toTopOf="@id/strength"/>
+
+<!--Dexterity-->
+  <TextView
+    android:id="@+id/dexterity"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="dexterity"
+    android:layout_margin="8dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/strength"
+    tools:text="Dexterity"/>
+
+  <TextView
+    android:id="@+id/dexterity_value"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:text="1"
+    app:layout_constraintBottom_toBottomOf="@id/dexterity"
+    app:layout_constraintEnd_toStartOf="@id/increase_dexterity_button"
+    app:layout_constraintStart_toEndOf="@id/dexterity"
+    app:layout_constraintTop_toTopOf="@id/dexterity"/>
+
+  <ImageButton
+    android:id="@+id/increase_dexterity_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintHorizontal_bias="1"
+    android:layout_margin="8dp"
+    android:onClick="plusOneToDex"
+    android:src="@drawable/ic_add"
+    app:layout_constraintTop_toTopOf="@id/dexterity"
+    app:layout_constraintBottom_toBottomOf="@id/dexterity"
+    app:layout_constraintStart_toEndOf="@id/dexterity_value"
+    app:layout_constraintEnd_toStartOf="@id/decrease_dexterity_button"
+    android:contentDescription="Increase dexterity by one."/>
+
+  <ImageButton
+    android:id="@+id/decrease_dexterity_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:contentDescription="Decrease dexterity by one."
+    android:onClick="minusOneToDex"
+    android:src="@drawable/ic_subtract"
+    app:layout_constraintBottom_toBottomOf="@id/dexterity"
+    app:layout_constraintStart_toEndOf="@id/increase_dexterity_button"
+    app:layout_constraintTop_toTopOf="@id/dexterity"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
